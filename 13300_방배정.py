@@ -23,8 +23,12 @@ def div(sex,year):
 def count_room(grad): 
     n0=grad.count(0)
     n1=grad.count(1)
-    room_0=(n0//K)+(n0%K)
-    room_1=(n1//K)+(n1%K)
+    room_0=(n0//K)
+    room_1=(n1//K)
+        if n0%K>0:
+            room_0+=1
+        if n1%K>0:
+            room_1+=1
     return room_0+room_1
 for _ in range(N):
     S,Y=map(int,input().split())
