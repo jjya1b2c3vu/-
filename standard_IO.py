@@ -35,8 +35,10 @@ import sys
 
       단, 채점을 위해 코드를 제출하실 때에는 반드시 아래 구문을 지우거나 주석 처리 하셔야 합니다.
 '''
-#sys.stdin = open("input.txt", "r")
-
+#파일에서 입력할때
+sys.stdin = open("input.txt", "r")
+#백준에서 입력할때
+sys.stdin.readline()
 T = int(input())
 # 여러개의 테스트 케이스가 주어지므로, 각각을 처리합니다.
 for test_case in range(1, T + 1):
